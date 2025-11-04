@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Решения</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+        th { background-color: #f2f2f2; }
+        .js-code { background-color: #f8f9fa; font-family: Consolas, monospace; }
+        .task-number { width: 40px; }
+        .condition { width: 25%; }
+        .python { width: 30%; }
+        .javascript { width: 30%; }
+    </style>
+</head>
+<body>
+    <h2>Решения задач на Python и JavaScript</h2>
+    <table>
+        <tr>
+            <th class="task-number">№</th>
+            <th class="condition">Условие</th>
+            <th class="python">Python</th>
+            <th class="javascript">JavaScript</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Вывести на экран текст «лесенкой»<br>Вася<br>&nbsp;&nbsp;&nbsp;&nbsp;пошел<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;гулять</td>
+            <td class="js-code">print("Вася")<br>print("\tпошел")<br>print("\t\tгулять")</td>
+            <td class="js-code">console.log("Вася");<br>console.log("\tпошел");<br>console.log("\t\tгулять");</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Вывести на экран рисунок из букв<br>&nbsp;&nbsp;&nbsp;Ж<br>&nbsp;&nbsp;ЖЖЖ<br>&nbsp;ЖЖЖЖЖ<br>ЖЖЖЖЖЖЖ<br>&nbsp;НН НН<br>&nbsp;ZZZZZ</td>
+            <td class="js-code">print("&nbsp;&nbsp;&nbsp;Ж")<br>print("&nbsp;&nbsp;ЖЖЖ")<br>print("&nbsp;ЖЖЖЖЖ")<br>print("ЖЖЖЖЖЖЖ")<br>print("&nbsp;НН НН")<br>print("&nbsp;ZZZZZ")</td>
+            <td class="js-code">console.log("&nbsp;&nbsp;&nbsp;Ж");<br>console.log("&nbsp;&nbsp;ЖЖЖ");<br>console.log("&nbsp;ЖЖЖЖЖ");<br>console.log("ЖЖЖЖЖЖЖ");<br>console.log("&nbsp;НН НН");<br>console.log("&nbsp;ZZZZZ");</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Ввести три числа, найти их сумму.</td>
+            <td class="js-code">print("Введите три числа:")<br>a = int(input())<br>b = int(input())<br>c = int(input())<br>ans = a + b + c<br>print(a, "+", b, "+", c, "=", ans, sep="")</td>
+            <td class="js-code">let a = parseInt(prompt("Введите первое число:"));<br>let b = parseInt(prompt("Введите второе число:"));<br>let c = parseInt(prompt("Введите третье число:"));<br>let sum = a + b + c;<br>console.log(a + "+" + b + "+" + c + "=" + sum);</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Ввести три числа, найти их сумму и произведение.</td>
+            <td class="js-code">print("Введите три числа:")<br>a = int(input())<br>b = int(input())<br>c = int(input())<br>ans1 = a + b + c<br>ans2 = a * b * c<br>print(a, "+", b, "+", c, "=", ans1, sep="")<br>print(a, "*", b, "*", c, "=", ans2, sep="")</td>
+            <td class="js-code">let a = parseInt(prompt("Введите первое число:"));<br>let b = parseInt(prompt("Введите второе число:"));<br>let c = parseInt(prompt("Введите третье число:"));<br>let sum = a + b + c;<br>let product = a * b * c;<br>console.log(a + "+" + b + "+" + c + "=" + sum);<br>console.log(a + "*" + b + "*" + c + "=" + product);</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Ввести три числа, найти их сумму, произведение и среднее арифметическое.</td>
+            <td class="js-code">print("Введите три числа:")<br>a = int(input())<br>b = int(input())<br>c = int(input())<br>ans1 = a + b + c<br>ans2 = a * b * c<br>ans3 = ans1 / 3<br>print(a, "+", b, "+", c, "=", ans1, sep="")<br>print(a, "*", b, "*", c, "=", ans2, sep="")<br>print("(", a, "+", b, "+", c, ")/3", "=", ans3, sep="")</td>
+            <td class="js-code">let a = parseInt(prompt("Введите первое число:"));<br>let b = parseInt(prompt("Введите второе число:"));<br>let c = parseInt(prompt("Введите третье число:"));<br>let sum = a + b + c;<br>let product = a * b * c;<br>let average = sum / 3;<br>console.log(a + "+" + b + "+" + c + "=" + sum);<br>console.log(a + "*" + b + "*" + c + "=" + product);<br>console.log("(" + a + "+" + b + "+" + c + ")/3=" + average);</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Ввести число, обозначающее количество секунд. Вывести то же самое время в минутах и секундах.</td>
+            <td class="js-code">print("Введите число секунд:")<br>a = int(input())<br>ans_min = a // 60<br>ans_sec = a % 60<br>print(ans_min, "мин.", ans_sec, "с.")</td>
+            <td class="js-code">let seconds = parseInt(prompt("Введите число секунд:"));<br>let minutes = Math.floor(seconds / 60);<br>let remainingSeconds = seconds % 60;<br>console.log(minutes + " мин. " + remainingSeconds + " с.");</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Ввести число, обозначающее количество секунд. Вывести то же самое время в часах, минутах и секундах.</td>
+            <td class="js-code">print("Введите число секунд:")<br>a = int(input())<br>ans_hour = a // 60 // 60<br>ans_min = a // 60 % 60<br>ans_sec = a % 60 % 60<br>print(ans_hour, "ч.", ans_min, "мин.", ans_sec, "с.")</td>
+            <td class="js-code">let seconds = parseInt(prompt("Введите число секунд:"));<br>let hours = Math.floor(seconds / 3600);<br>let minutes = Math.floor((seconds % 3600) / 60);<br>let remainingSeconds = seconds % 60;<br>console.log(hours + " ч. " + minutes + " мин. " + remainingSeconds + " с.");</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Занятия в школе начинаются в 8-30. Урок длится 45 минут, перерывы между уроками – 10 минут. Ввести номер урока и вывести время его окончания.</td>
+            <td class="js-code">print("Введите номер урока:")<br>a = int(input())<br>les = (a * (45 + 10) + 500)<br>les_hour = les // 60<br>les_min = les % 60<br>print(f"{les_hour:02d}", f"{les_min:02d}", sep="-")</td>
+            <td class="js-code">let lesson = parseInt(prompt("Введите номер урока:"));<br>let totalMinutes = 8 * 60 + 30 + lesson * 45 + (lesson - 1) * 10;<br>let hours = Math.floor(totalMinutes / 60);<br>let minutes = totalMinutes % 60;<br>console.log(hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0'));</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Ввести число, обозначающее размер одной фотографии в Мбайтах. Определить, сколько фотографий поместится на флэш-карту объёмом 2 Гбайта.</td>
+            <td class="js-code">a = float(input("Размер фотографии в Мбайтах: "))<br>b = 2*1024 // a<br>print("Поместится фотографий:", int(b))</td>
+            <td class="js-code">let photoSize = parseFloat(prompt("Размер фотографии в Мбайтах:"));<br>let flashSize = 2 * 1024;<br>let photosCount = Math.floor(flashSize / photoSize);<br>console.log("Поместится фотографий: " + photosCount);</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Оцифровка звука выполняется в режиме стерео с частотой дискретизации 44,1 кГц и глубиной кодирования 24 бита. Ввести время записи в минутах и определить, сколько Мбайт нужно выделить для хранения полученного файла (округлить результат в большую сторону).</td>
+            <td class="js-code">import math<br><br>a = float(input("Введите время записи в минутах: "))<br>b = math.ceil((44100 * 24 * 2 * a * 60) // (8 * 1024 * 1024))<br>print("Размер файла:", int(b), "Мбайт")</td>
+            <td class="js-code">let time = parseFloat(prompt("Введите время записи в минутах:"));<br>let fileSize = (44100 * 24 * 2 * time * 60) / (8 * 1024 * 1024);<br>let roundedSize = Math.ceil(fileSize);<br>console.log("Размер файла: " + roundedSize + " Мбайт");</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Разведчики-математики для того, чтобы опознать своих, используют числовые пароли. Услышав число-пароль, разведчик должен возвести его в квадрат и сказать в ответ первую цифры дробной части полученного числа. Напишите программу, которая по полученному паролю (вещественному числу) вычисляет число-ответ.</td>
+            <td class="js-code">a = float(input("Введите пароль: "))<br>b = int((a**2)*10) % 10<br>print("Ответ:", b)</td>
+            <td class="js-code">let password = parseFloat(prompt("Введите пароль:"));<br>let squared = password * password;<br>let firstDecimal = Math.floor(squared * 10) % 10;<br>console.log("Ответ: " + firstDecimal);</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>В игре «Русское лото» из мешка случайным образом выбираются бочонки, на каждом из которых написано число от 1 до 90. Напишите программу, которая выводит наугад первые 5 выигрышных номеров.</td>
+            <td class="js-code">from random import randint<br><br>for i in range(1, 6):<br>&nbsp;&nbsp;&nbsp;&nbsp;print(randint(1,90), end=" ")</td>
+            <td class="js-code">let numbers = [];<br>for (let i = 0; i < 5; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;numbers.push(Math.floor(Math.random() * 90) + 1);<br>}<br>console.log(numbers.join(" "));</td>
+        </tr>
+                <tr>
+            <td>13</td>
+            <td>+ Доработайте программу «Русское лото» так, чтобы все 5 значений гарантированно были бы разными</td>
+            <td class="js-code">from random import sample<br><br>print(sample(range(1,90), 5))</td>
+            <td class="js-code">let numbers = [];<br>while (numbers.length < 5) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let num = Math.floor(Math.random() * 90) + 1;<br>&nbsp;&nbsp;&nbsp;&nbsp;if (!numbers.includes(num)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numbers.push(num);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log(numbers);</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>+ Игральный кубик бросается три раза. Из этих чисел составляется целое число, программа должна найти его квадрат.</td>
+            <td class="js-code">from random import randint<br><br>print("Выпало очков:")<br>p1 = randint(1,9)<br>print(p1)<br>p2 = randint(1,9)<br>print(p2)<br>p3 = randint(1,9)<br>print(p3)<br>a = int(str(p1) + str(p2) + str(p3))<br>b = a**2<br>print("Число:", a)<br>print("Его квадрат:", b)</td>
+            <td class="js-code">console.log("Выпало очков:");<br>let p1 = Math.floor(Math.random() * 9) + 1;<br>let p2 = Math.floor(Math.random() * 9) + 1;<br>let p3 = Math.floor(Math.random() * 9) + 1;<br>console.log(p1);<br>console.log(p2);<br>console.log(p3);<br>let number = parseInt(p1.toString() + p2.toString() + p3.toString());<br>let square = number * number;<br>console.log("Число:", number);<br>console.log("Его квадрат:", square);</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>+ Получить случайное трёхзначное число и вывести в столбик его отдельные цифры.</td>
+            <td class="js-code">from random import randint<br><br>p1 = randint(1,9)<br>p2 = randint(0,9)<br>p3 = randint(0,9)<br>nums = [str(p1), str(p2), str(p3)]<br>print("Получено число:", "".join(nums))<br>print("Сотни:", p1)<br>print("Десятки:", p2)<br>print("Единицы:", p3)</td>
+            <td class="js-code">let hundreds = Math.floor(Math.random() * 9) + 1;<br>let tens = Math.floor(Math.random() * 10);<br>let units = Math.floor(Math.random() * 10);<br>let number = hundreds * 100 + tens * 10 + units;<br>console.log("Получено число:", number);<br>console.log("Сотни:", hundreds);<br>console.log("Десятки:", tens);<br>console.log("Единицы:", units);</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Ввести два целых числа, найти наибольшее и наименьшее из них.</td>
+            <td class="js-code">print("Введите два целых числа:")<br>a,b = map(int, input().split())<br>print("Наибольшее число: ", max(a,b))<br>print("Наименьшее число: ", min(a,b))</td>
+            <td class="js-code">let input = prompt("Введите два целых числа через пробел:").split(" ");<br>let a = parseInt(input[0]);<br>let b = parseInt(input[1]);<br>console.log("Наибольшее число:", Math.max(a, b));<br>console.log("Наименьшее число:", Math.min(a, b));</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Ввести четыре целых числа, найти наибольшее из них.</td>
+            <td class="js-code">print("Введите четыре целых числа:")<br>a,b,c,d = map(int, input().split())<br>print("Наибольшее число: ", max(a,b,c,d))</td>
+            <td class="js-code">let input = prompt("Введите четыре целых числа через пробел:").split(" ");<br>let a = parseInt(input[0]);<br>let b = parseInt(input[1]);<br>let c = parseInt(input[2]);<br>let d = parseInt(input[3]);<br>console.log("Наибольшее число:", Math.max(a, b, c, d));</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Ввести последовательно возраст Антона, Бориса и Виктора. Определить, кто из них старше.</td>
+            <td class="js-code">a = input("Возраст Антона: ")<br>b = input("Возраст Бориса: ")<br>c = input("Возраст Виктора: ")<br>if a > b and a > c and b != c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Антон старше всех.")<br>elif b > a and b > c and a != c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Борис старше всех.")<br>elif c > a and c > b and a != b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Виктор старше всех.")<br>elif a == b and a > c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Антон и Борис старше Виктора.")<br>elif a == c and a > b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Антон и Виктор старше Бориса.")<br>elif c == b and c > a:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Борис и Виктор старше Антона.")<br>elif a == b and a < c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Виктор старше Антона и Бориса.")<br>elif a == c and a < b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Борис старше Антона и Виктора.")<br>elif c == b and c < a:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Антон старше Бориса и Виктора.")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Все одного возраста.")</td>
+            <td class="js-code">let anton = parseInt(prompt("Возраст Антона:"));<br>let boris = parseInt(prompt("Возраст Бориса:"));<br>let viktor = parseInt(prompt("Возраст Виктора:"));<br><br>if (anton > boris && anton > viktor && boris !== viktor) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Антон старше всех.");<br>} else if (boris > anton && boris > viktor && anton !== viktor) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Борис старше всех.");<br>} else if (viktor > anton && viktor > boris && anton !== boris) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Виктор старше всех.");<br>} else if (anton === boris && anton > viktor) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Антон и Борис старше Виктора.");<br>} else if (anton === viktor && anton > boris) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Антон и Виктор старше Бориса.");<br>} else if (viktor === boris && viktor > anton) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Борис и Виктор старше Антона.");<br>} else if (anton === boris && anton < viktor) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Виктор старше Антона и Бориса.");<br>} else if (anton === viktor && anton < boris) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Борис старше Антона и Виктора.");<br>} else if (viktor === boris && viktor < anton) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Антон старше Бориса и Виктора.");<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Все одного возраста.");<br>}</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Напишите программу, которая получает три числа - рост трёх спортсменов, и выводит сообщение</td>
+            <td class="js-code">print("Введите рост трех спортсменов:")<br>a,b,c = map(int, input().split())<br>if a <= b and b <= c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("По росту.")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Не по росту.")</td>
+            <td class="js-code">let input = prompt("Введите рост трех спортсменов через пробел:").split(" ");<br>let a = parseInt(input[0]);<br>let b = parseInt(input[1]);<br>let c = parseInt(input[2]);<br>if (a <= b && b <= c) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("По росту.");<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Не по росту.");<br>}</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Напишите программу, которая получает номер месяца и выводит соответствующее ему время года</td>
+            <td class="js-code">a = int(input("Введите номер месяца: "))<br>if a >= 3 and a <= 5:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Весна.")<br>elif a >= 6 and a<= 8:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Лето.")<br>elif a >= 9 and a<= 11:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Осень.")<br>elif a == 12 or a == 1 or a == 2:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Зима.")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Неверный номер месяца.")</td>
+            <td class="js-code">let month = parseInt(prompt("Введите номер месяца:"));<br>if (month >= 3 && month <= 5) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Весна.");<br>} else if (month >= 6 && month <= 8) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Лето.");<br>} else if (month >= 9 && month <= 11) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Осень.");<br>} else if (month === 12 || month === 1 || month === 2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Зима.");<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Неверный номер месяца.");<br>}</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Напишите программу, которая получает возраст человека и выводит этот возраст со словом «год», «года» или «лет»</td>
+            <td class="js-code">a = int(input("Введите возраст: "))<br>if a % 10 == 1:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Вам", a, "год")<br>elif a % 10 == 2 or a % 10 == 3:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Вам", a, "года")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Вам", a, "лет")</td>
+            <td class="js-code">let age = parseInt(prompt("Введите возраст:"));<br>let lastDigit = age % 10;<br>if (lastDigit === 1) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Вам " + age + " год");<br>} else if (lastDigit === 2 || lastDigit === 3) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Вам " + age + " года");<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Вам " + age + " лет");<br>}</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Напишите программу, которая получает число и проверяет, является ли оно трёхзначным</td>
+            <td class="js-code">a = int(input("Введите число: "))<br>if len(str(a)) == 3:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("да.")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("нет.")</td>
+            <td class="js-code">let number = parseInt(prompt("Введите число:"));<br>if (number >= 100 && number <= 999) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("да.");<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("нет.");<br>}</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>Напишите программу, которая получает трёхзначное число и проверяет, является ли оно палиндромом</td>
+            <td class="js-code">a = int(input("Введите число: "))<br>if a // 100 == a % 10:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("да.")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("нет.")</td>
+            <td class="js-code">let number = parseInt(prompt("Введите трехзначное число:"));<br>let firstDigit = Math.floor(number / 100);<br>let lastDigit = number % 10;<br>if (firstDigit === lastDigit) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("да.");<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("нет.");<br>}</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>Напишите программу, которая получает трёхзначное число и проверяет, все ли его цифры одинаковы</td>
+            <td class="js-code">a = int(input("Введите число: "))<br><br>if a // 100 == a // 10 % 10 == a % 10:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("да.")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("нет.")</td>
+            <td class="js-code">let number = parseInt(prompt("Введите трехзначное число:"));<br>let firstDigit = Math.floor(number / 100);<br>let secondDigit = Math.floor((number % 100) / 10);<br>let thirdDigit = number % 10;<br>if (firstDigit === secondDigit && secondDigit === thirdDigit) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("да.");<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("нет.");<br>}</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Вычислить сумму цифр трёхзначного числа (исправленная версия)</td>
+            <td class="js-code">N = int(input("N = "))<br>d0 = N // 100<br>d1 = N // 10 % 10<br>d2 = N % 10<br>print(d0 + d1 + d2)</td>
+            <td class="js-code">let N = parseInt(prompt("N = "));<br>let d0 = Math.floor(N / 100);<br>let d1 = Math.floor((N % 100) / 10);<br>let d2 = N % 10;<br>console.log(d0 + d1 + d2);</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Доработайте программу так, чтобы она правильно работала с отрицательными трёхзначными числами</td>
+            <td class="js-code">N = abs(int(input("N = ")))<br>d0 = N // 100<br>d1 = N // 10 % 10<br>d2 = N % 10<br>print(d0 + d1 + d2)</td>
+            <td class="js-code">let N = parseInt(prompt("N = "));<br>let absN = Math.abs(N);<br>let d0 = Math.floor(absN / 100);<br>let d1 = Math.floor((absN % 100) / 10);<br>let d2 = absN % 10;<br>console.log(d0 + d1 + d2);</td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>Найти наибольшее из трёх чисел (исправленная версия)</td>
+            <td class="js-code">a = int(input("a = "))<br>b = int(input("b = "))<br>c = int(input("c = "))<br>M = 0<br>if a > b:<br>&nbsp;&nbsp;&nbsp;&nbsp;M = a<br>elif c > b:<br>&nbsp;&nbsp;&nbsp;&nbsp;M = c<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;M = b<br>print(M)</td>
+            <td class="js-code">let a = parseInt(prompt("a = "));<br>let b = parseInt(prompt("b = "));<br>let c = parseInt(prompt("c = "));<br>let M;<br>if (a > b && a > c) {<br>&nbsp;&nbsp;&nbsp;&nbsp;M = a;<br>} else if (b > a && b > c) {<br>&nbsp;&nbsp;&nbsp;&nbsp;M = b;<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;M = c;<br>}<br>console.log(M);</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>Напишите программу, которая получает количество повторений и выводит столько же раз сообщение</td>
+            <td class="js-code">a = int(input("Сколько раз повторить? "))<br>b = 0<br>while (b != a):<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Привет!")<br>&nbsp;&nbsp;&nbsp;&nbsp;b += 1</td>
+            <td class="js-code">let count = parseInt(prompt("Сколько раз повторить?"));<br>for (let i = 0; i < count; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Привет!");<br>}</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>Напишите программу, которая получает натуральное число и определяет, сколько раз в его записи встречается цифра 1</td>
+            <td class="js-code">a = int(input("Введите число: "))<br>b = len(str(a)) - len(str(a).replace("1",""))<br>print("Единиц:", b)</td>
+            <td class="js-code">let number = prompt("Введите число:");<br>let count = 0;<br>for (let i = 0; i < number.length; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (number[i] === '1') {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Единиц:", count);</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>Напишите программу, которая получает натуральное число и находит наибольшую цифру в его записи</td>
+            <td class="js-code">a = int(input("Введите число: "))<br>b = 0<br>while a != 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;if a % 10 > b:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = a % 10<br>&nbsp;&nbsp;&nbsp;&nbsp;a = a // 10<br>print("Наибольшая цифра:", b)</td>
+            <td class="js-code">let number = parseInt(prompt("Введите число:"));<br>let maxDigit = 0;<br>while (number > 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let digit = number % 10;<br>&nbsp;&nbsp;&nbsp;&nbsp;if (digit > maxDigit) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxDigit = digit;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;number = Math.floor(number / 10);<br>}<br>console.log("Наибольшая цифра:", maxDigit);</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>Напишите программу, которая получает натуральное число и определяет, есть ли в его записи одинаковые цифры, стоящие рядом</td>
+            <td class="js-code">a = int(input("Введите число: "))<br>b = 0<br>while a != 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;if (a // 10 % 10 == a % 10):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b += 1<br>&nbsp;&nbsp;&nbsp;&nbsp;a = a // 10<br>if b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("да.")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("нет.")</td>
+            <td class="js-code">let number = prompt("Введите число:");<br>let hasSameNeighbors = false;<br>for (let i = 0; i < number.length - 1; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (number[i] === number[i + 1]) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hasSameNeighbors = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log(hasSameNeighbors ? "да." : "нет.");</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>Ввести два натуральных числа и найти их НОД с помощью алгоритма Евклида</td>
+            <td class="js-code">a, b = map(int, (input("Введите два числа: ")).split())<br>c = a<br>d = b<br>while a != 0 and b != 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;if a > b:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = a % b<br>&nbsp;&nbsp;&nbsp;&nbsp;else:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = b % a<br>print("НОД(", c, "," , d, ")=", a + b, sep="")</td>
+            <td class="js-code">let input = prompt("Введите два числа через пробел:").split(" ");<br>let a = parseInt(input[0]);<br>let b = parseInt(input[1]);<br>let originalA = a;<br>let originalB = b;<br>while (a !== 0 && b !== 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (a > b) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = a % b;<br>&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = b % a;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("НОД(" + originalA + "," + originalB + ")=" + (a + b));</td>
+        </tr>
+        <tr>
+    <td>33</td>
+    <td>Ввести с клавиатуры два натуральных числа и найти их НОД с помощью модифицированного алгоритма Евклида.</td>
+    <td class="js-code">from tabulate import tabulate<br><br>a = [64168, 358853, 6365133, 17905514, 549868978]<br>b = [82678, 691042, 11494962, 23108855, 298294835]<br>c = a.copy()<br>d = b.copy()<br>e = []<br>i = 0<br><br>while i != len(c) :<br>&nbsp;&nbsp;&nbsp;&nbsp;while c[i] != 0 and d[i] != 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if c[i] > d[i]:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c[i] = c[i] % d[i]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d[i] = d[i] % c[i]<br>&nbsp;&nbsp;&nbsp;&nbsp;e.append(c[i] + d[i])<br>&nbsp;&nbsp;&nbsp;&nbsp;i += 1<br><br>ans = [["a"], ["b"], ["НОД(a,b)"]]<br>for j in a:<br>&nbsp;&nbsp;&nbsp;&nbsp;ans[0].append(j)<br><br>for j in b:<br>&nbsp;&nbsp;&nbsp;&nbsp;ans[1].append(j)<br><br>for j in e:<br>&nbsp;&nbsp;&nbsp;&nbsp;ans[2].append(j)<br><br>print(tabulate(ans, tablefmt='fancy_grid'))</td>
+    <td class="js-code">let a = [64168, 358853, 6365133, 17905514, 549868978];<br>let b = [82678, 691042, 11494962, 23108855, 298294835];<br>let results = [];<br><br>for (let i = 0; i < a.length; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let x = a[i];<br>&nbsp;&nbsp;&nbsp;&nbsp;let y = b[i];<br>&nbsp;&nbsp;&nbsp;&nbsp;while (x !== 0 && y !== 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (x > y) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = x % y;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y = y % x;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;results.push(x + y);<br>}<br><br>console.log("a: " + a.join(", "));<br>console.log("b: " + b.join(", "));<br>console.log("НОД(a,b): " + results.join(", "));</td>
+</tr>
+<tr>
+    <td>34</td>
+    <td>Сравнить количество шагов цикла для вычисления НОД с помощью обычного и модифицированного алгоритмов Евклида.</td>
+    <td class="js-code">print("Введите два числа:")<br>a,b = map(int, input().split())<br><br>c = a<br>d = b<br><br>e = 0<br>f = 0<br><br>while a != b:<br>&nbsp;&nbsp;&nbsp;&nbsp;if a > b:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a -= b<br>&nbsp;&nbsp;&nbsp;&nbsp;else:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b -= a<br>&nbsp;&nbsp;&nbsp;&nbsp;e += 1<br><br>while a != 0 and b != 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;if a > b:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = a % b<br>&nbsp;&nbsp;&nbsp;&nbsp;else:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = b % a<br>&nbsp;&nbsp;&nbsp;&nbsp;f += 1<br><br>print("НОД(", c, "," , d, ")=", a + b, sep="")<br>print("Обычный алгоритм:", e)<br>print("Модифицированный:", f)</td>
+    <td class="js-code">let input = prompt("Введите два числа через пробел:").split(" ");<br>let a = parseInt(input[0]);<br>let b = parseInt(input[1]);<br>let originalA = a;<br>let originalB = b;<br><br>let steps1 = 0;<br>let x = a, y = b;<br>while (x !== y) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (x > y) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x -= y;<br>&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y -= x;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;steps1++;<br>}<br><br>let steps2 = 0;<br>x = a; y = b;<br>while (x !== 0 && y !== 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (x > y) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = x % y;<br>&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y = y % x;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;steps2++;<br>}<br><br>console.log("НОД(" + originalA + "," + originalB + ")=" + (x + y));<br>console.log("Обычный алгоритм:", steps1);<br>console.log("Модифицированный:", steps2);</td>
+</tr>
+<tr>
+    <td>35</td>
+    <td>Определить, сколько получено чисел, которые делятся на 3 (ввод заканчивается нулём).</td>
+    <td class="js-code">a = []<br>while True:<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(int(input("Введите число (0 для завершения): ")))<br>&nbsp;&nbsp;&nbsp;&nbsp;if a[-1] == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>b = 0<br>for i in a:<br>&nbsp;&nbsp;&nbsp;&nbsp;if i != 0 and i % 3 == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b += 1<br>print("Кол-во чисел, которые делятся на 3:", b)</td>
+    <td class="js-code">let numbers = [];<br>let input;<br>do {<br>&nbsp;&nbsp;&nbsp;&nbsp;input = parseInt(prompt("Введите число (0 для завершения):"));<br>&nbsp;&nbsp;&nbsp;&nbsp;numbers.push(input);<br>} while (input !== 0);<br><br>let count = 0;<br>for (let num of numbers) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num !== 0 && num % 3 === 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Кол-во чисел, которые делятся на 3:", count);</td>
+</tr>
+<tr>
+    <td>36</td>
+    <td>Определить, сколько получено двузначных чисел, которые заканчиваются на 3 (ввод заканчивается нулём).</td>
+    <td class="js-code">a = []<br>while True:<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(int(input("Введите число (0 для завершения): ")))<br>&nbsp;&nbsp;&nbsp;&nbsp;if a[-1] == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>b = 0<br>for i in a:<br>&nbsp;&nbsp;&nbsp;&nbsp;if i != 0 and i % 3 == 0 and i // 10 != 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b += 1<br>print("Кол-во двузначных чисел, которые делятся на 3:", b)</td>
+    <td class="js-code">let numbers = [];<br>let input;<br>do {<br>&nbsp;&nbsp;&nbsp;&nbsp;input = parseInt(prompt("Введите число (0 для завершения):"));<br>&nbsp;&nbsp;&nbsp;&nbsp;numbers.push(input);<br>} while (input !== 0);<br><br>let count = 0;<br>for (let num of numbers) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num !== 0 && num >= 10 && num <= 99 && num % 10 === 3) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Кол-во двузначных чисел, которые заканчиваются на 3:", count);</td>
+</tr>
+<tr>
+    <td>37</td>
+    <td>Найти максимальное из введённых чётных чисел (ввод заканчивается нулём).</td>
+    <td class="js-code">a = []<br>while True:<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(int(input("Введите число (0 для завершения): ")))<br>&nbsp;&nbsp;&nbsp;&nbsp;if a[-1] == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>b = []<br>for i in a:<br>&nbsp;&nbsp;&nbsp;&nbsp;if i % 2 == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.append(i)<br>print("Максимальное число из четных:", max(b))</td>
+    <td class="js-code">let numbers = [];<br>let input;<br>do {<br>&nbsp;&nbsp;&nbsp;&nbsp;input = parseInt(prompt("Введите число (0 для завершения):"));<br>&nbsp;&nbsp;&nbsp;&nbsp;numbers.push(input);<br>} while (input !== 0);<br><br>let evenNumbers = numbers.filter(num => num % 2 === 0 && num !== 0);<br>let maxEven = evenNumbers.length > 0 ? Math.max(...evenNumbers) : "нет четных чисел";<br>console.log("Максимальное число из четных:", maxEven);</td>
+</tr>
+<tr>
+    <td>38</td>
+    <td>Программа предлагает ввести число-пароль и не переходит к выполнению основной части, пока не введён правильный пароль.</td>
+    <td class="js-code">a = int(input("Введите число-пароль: "))<br>b = 0<br>while (b != a):<br>&nbsp;&nbsp;&nbsp;&nbsp;b = int(input("Подтвердите число-пароль: "))<br>print("Доступ к секретным сведениям разрешен!")</td>
+    <td class="js-code">let password = parseInt(prompt("Введите число-пароль:"));<br>let input;<br>do {<br>&nbsp;&nbsp;&nbsp;&nbsp;input = parseInt(prompt("Подтвердите число-пароль:"));<br>} while (input !== password);<br>console.log("Доступ к секретным сведениям разрешен!");</td>
+</tr>
+<tr>
+    <td>39</td>
+    <td>Определить, является ли число простым.</td>
+    <td class="js-code">import math<br><br>a = int(input("Введите натуральное число: "))<br>b = False<br>if (a >= 0):<br>&nbsp;&nbsp;&nbsp;&nbsp;b = True<br>&nbsp;&nbsp;&nbsp;&nbsp;for i in range(2, int(math.sqrt(a) + 1)):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if a % i == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = False<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>if b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Число является простым.")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Число не является простым.")</td>
+    <td class="js-code">let number = parseInt(prompt("Введите натуральное число:"));<br>let isPrime = true;<br><br>if (number < 2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;isPrime = false;<br>} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;for (let i = 2; i <= Math.sqrt(number); i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (number % i === 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isPrime = false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br><br>console.log(isPrime ? "Число является простым." : "Число не является простым.");</td>
+</tr>
+<tr>
+    <td>40</td>
+    <td>Вычислить произведение двух чисел, используя только операции сложения.</td>
+    <td class="js-code">a, b = map(int,input("Введите два числа: ").split())<br>c = 0<br>for i in range(b):<br>&nbsp;&nbsp;&nbsp;&nbsp;c += a<br>print(a, "*", b, "=", c)</td>
+    <td class="js-code">let input = prompt("Введите два числа через пробел:").split(" ");<br>let a = parseInt(input[0]);<br>let b = parseInt(input[1]);<br>let result = 0;<br>for (let i = 0; i < Math.abs(b); i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;result += Math.abs(a);<br>}<br>if ((a < 0 && b > 0) || (a > 0 && b < 0)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;result = -result;<br>}<br>console.log(a + " * " + b + " = " + result);</td>
+</tr>
+<tr>
+    <td>41</td>
+    <td>Вычислить целый квадратный корень из числа.</td>
+    <td class="js-code">a = int(input("Введите натуральное число: "))<br><br>print("Целый квадратный корень:", int(a**0.5))</td>
+    <td class="js-code">let number = parseInt(prompt("Введите натуральное число:"));<br>let sqrt = Math.floor(Math.sqrt(number));<br>console.log("Целый квадратный корень:", sqrt);</td>
+</tr>
+<tr>
+    <td>42</td>
+    <td>Найти количество четырёхзначных чисел, которые делятся на 7.</td>
+    <td class="js-code">k = 0<br>for i in range(1000, 10000):<br>&nbsp;&nbsp;&nbsp;&nbsp;if i % 7 == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k += 1<br>print("Количество чисел:", k)</td>
+    <td class="js-code">let count = 0;<br>for (let i = 1000; i < 10000; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (i % 7 === 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Количество четырехзначных чисел, делящихся на 7:", count);</td>
+</tr>
+<tr>
+    <td>43</td>
+    <td>Найти все трёхзначные числа, которые при делении на 15 дают в остатке 11, а при делении на 11 дают в остатке 9.</td>
+    <td class="js-code">k = 0<br>for i in range(1, 1000):<br>&nbsp;&nbsp;&nbsp;&nbsp;if i % 15 == 11 and i % 11 == 9:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k += 1<br>print("Количество чисел:", k)</td>
+    <td class="js-code">let numbers = [];<br>for (let i = 100; i < 1000; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (i % 15 === 11 && i % 11 === 9) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numbers.push(i);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Найденные числа:", numbers.join(", "));<br>console.log("Количество чисел:", numbers.length);</td>
+</tr>
+<tr>
+    <td>44</td>
+    <td>Вычислить факториал числа.</td>
+    <td class="js-code">a = int(input("Введите натуральное число: "))<br>b = 1<br>for i in range(1, a + 1):<br>&nbsp;&nbsp;&nbsp;&nbsp;b *= i<br>print("Факториал равен:", b)</td>
+    <td class="js-code">let number = parseInt(prompt("Введите натуральное число:"));<br>let factorial = 1;<br>for (let i = 1; i <= number; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;factorial *= i;<br>}<br>console.log("Факториал равен:", factorial);</td>
+</tr>
+<tr>
+    <td>45</td>
+    <td>Найти все трёхзначные числа Армстронга.</td>
+    <td class="js-code">k = 0<br>for i in range(100, 1000):<br>&nbsp;&nbsp;&nbsp;&nbsp;nums = list(map(int, str(i)))<br>&nbsp;&nbsp;&nbsp;&nbsp;a = 0<br>&nbsp;&nbsp;&nbsp;&nbsp;for b in nums:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a += b**len(nums)<br>&nbsp;&nbsp;&nbsp;&nbsp;if a == i:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(a)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k += 1<br>print("Количество чисел:", k)</td>
+    <td class="js-code">let armstrongNumbers = [];<br>for (let i = 100; i < 1000; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let digits = i.toString().split('').map(Number);<br>&nbsp;&nbsp;&nbsp;&nbsp;let sum = digits.reduce((acc, digit) => acc + Math.pow(digit, 3), 0);<br>&nbsp;&nbsp;&nbsp;&nbsp;if (sum === i) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;armstrongNumbers.push(i);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Числа Армстронга:", armstrongNumbers.join(", "));<br>console.log("Количество чисел:", armstrongNumbers.length);</td>
+</tr>
+<tr>
+    <td>46</td>
+    <td>Заполнить массив из 10 элементов значением X.</td>
+    <td class="js-code">a = int(input("Введите число: "))<br>b = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;b.append(a)<br>print(b)</td>
+    <td class="js-code">let value = parseInt(prompt("Введите число:"));<br>let array = Array(10).fill(value);<br>console.log("Массив:", array);</td>
+</tr>
+<tr>
+    <td>47</td>
+    <td>Заполнить массив из 10 элементов последовательными натуральными числами, начиная с X.</td>
+    <td class="js-code">a = int(input("Введите натуральное число: "))<br>b = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;b.append(a)<br>&nbsp;&nbsp;&nbsp;&nbsp;a += 1<br>print(b)</td>
+    <td class="js-code">let start = parseInt(prompt("Введите начальное число:"));<br>let array = [];<br>for (let i = 0; i < 10; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(start + i);<br>}<br>console.log("Массив:", array);</td>
+</tr>
+<tr>
+    <td>48</td>
+    <td>Заполнить массив из 10 элементов натуральными числами в обратном порядке, начиная со значения X.</td>
+    <td class="js-code">a = int(input("Введите натуральное число: "))<br>b = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;b.append(a)<br>&nbsp;&nbsp;&nbsp;&nbsp;a -= 1<br>print(list(reversed(b)))</td>
+    <td class="js-code">let start = parseInt(prompt("Введите начальное число:"));<br>let array = [];<br>for (let i = 0; i < 10; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(start - i);<br>}<br>console.log("Массив:", array);</td>
+</tr>
+<tr>
+    <td>49</td>
+    <td>Заполнить массив из 10 элементов степенями числа 2.</td>
+    <td class="js-code">a = 0<br>b = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;a = 2**i<br>&nbsp;&nbsp;&nbsp;&nbsp;b.append(a)<br>print(b)</td>
+    <td class="js-code">let array = [];<br>for (let i = 0; i < 10; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(Math.pow(2, i));<br>}<br>console.log("Массив:", array);</td>
+</tr>
+<tr>
+    <td>50</td>
+    <td>Заполнить массив из 10 элементов степенями числа 2, начиная с конца.</td>
+    <td class="js-code">a = int(input("Введите натуральное число: "))<br>c = a<br>b = []<br>for i in range(0,5):<br>&nbsp;&nbsp;&nbsp;&nbsp;a -= 1<br>&nbsp;&nbsp;&nbsp;&nbsp;b.append(a)<br>b = list(reversed(b))<br>b.append(c)<br>for i in range(0,5):<br>&nbsp;&nbsp;&nbsp;&nbsp;c -= 1<br>&nbsp;&nbsp;&nbsp;&nbsp;b.append(c)<br>print(b)</td>
+    <td class="js-code">let array = [];<br>for (let i = 9; i >= 0; i--) {<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(Math.pow(2, i));<br>}<br>console.log("Массив:", array);</td>
+</tr>
+<tr>
+    <td>51</td>
+    <td>Заполнить массив из 11 элементов так, чтобы средний элемент был равен X, слева - по возрастанию, справа - по убыванию.</td>
+    <td class="js-code">from random import randint<br><br>a = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(randint(0, 10))<br>b = a.copy()<br>for i in range(len(b)):<br>&nbsp;&nbsp;&nbsp;&nbsp;b[i] **= 2<br>print("Массив:", a)<br>print("Квадраты:", b)</td>
+    <td class="js-code">let x = parseInt(prompt("Введите центральное число:"));<br>let array = [];<br>for (let i = 0; i < 11; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(x - Math.abs(5 - i));<br>}<br>console.log("Массив:", array);</td>
+</tr>
+<tr>
+    <td>52</td>
+    <td>Заполнить массив из 10 элементов случайными числами [0,10] и вывести квадраты элементов.</td>
+    <td class="js-code">from random import randint<br><br>a = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(randint(0, 10))<br>b = a.copy()<br>for i in range(len(b)):<br>&nbsp;&nbsp;&nbsp;&nbsp;b[i] **= 2<br>print("Массив:", a)<br>print("Квадраты:", b)</td>
+    <td class="js-code">let array = [];<br>let squares = [];<br>for (let i = 0; i < 10; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let num = Math.floor(Math.random() * 11);<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(num);<br>&nbsp;&nbsp;&nbsp;&nbsp;squares.push(num * num);<br>}<br>console.log("Массив:", array);<br>console.log("Квадраты:", squares);</td>
+</tr>
+<tr>
+    <td>53</td>
+    <td>Заполнить массив из 10 элементов случайными числами [100,300] и вывести число десятков.</td>
+    <td class="js-code">from random import randint<br><br>a = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(randint(100, 300))<br>b = a.copy()<br>for i in range(len(b)):<br>&nbsp;&nbsp;&nbsp;&nbsp;b[i] = b[i] // 10 % 10<br>print("Массив:", a)<br>print("Число десятков:", b)</td>
+    <td class="js-code">let array = [];<br>let tens = [];<br>for (let i = 0; i < 10; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let num = Math.floor(Math.random() * 201) + 100;<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(num);<br>&nbsp;&nbsp;&nbsp;&nbsp;tens.push(Math.floor((num % 100) / 10));<br>}<br>console.log("Массив:", array);<br>console.log("Число десятков:", tens);</td>
+</tr>
+<tr>
+    <td>54</td>
+    <td>Заполнить массив из 10 элементов случайными числами [100,500] и вывести суммы цифр.</td>
+    <td class="js-code">from random import randint<br><br>a = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(randint(100, 500))<br>b = a.copy()<br>for i in range(len(b)):<br>&nbsp;&nbsp;&nbsp;&nbsp;nums = list(map(int, str(b[i])))<br>&nbsp;&nbsp;&nbsp;&nbsp;d = 0<br>&nbsp;&nbsp;&nbsp;&nbsp;for c in nums:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d += c<br>&nbsp;&nbsp;&nbsp;&nbsp;b[i] = d<br>print("Массив:", a)<br>print("Сумма цифр:", b)</td>
+    <td class="js-code">let array = [];<br>let sums = [];<br>for (let i = 0; i < 10; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let num = Math.floor(Math.random() * 401) + 100;<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(num);<br>&nbsp;&nbsp;&nbsp;&nbsp;let digitSum = num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);<br>&nbsp;&nbsp;&nbsp;&nbsp;sums.push(digitSum);<br>}<br>console.log("Массив:", array);<br>console.log("Сумма цифр:", sums);</td>
+</tr>
+<tr>
+    <td>55</td>
+    <td>Заполнить массив из 10 элементов случайными числами [–5;5] и найти сумму положительных элементов.</td>
+    <td class="js-code">from random import randint<br><br>a = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(randint(-5, 5))<br>b = 0<br>for i in range(len(a)):<br>&nbsp;&nbsp;&nbsp;&nbsp;if a[i] > 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b += a[i]<br>print("Массив:", a)<br>print("Сумма положительных элементов:", b)</td>
+    <td class="js-code">let array = [];<br>let sumPositive = 0;<br>for (let i = 0; i < 10; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let num = Math.floor(Math.random() * 11) - 5;<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(num);<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num > 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sumPositive += num;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Массив:", array);<br>console.log("Сумма положительных элементов:", sumPositive);</td>
+</tr>
+<tr>
+    <td>56</td>
+    <td>Заполнить массив из 10 элементов случайными числами [–2;2] и найти произведение ненулевых элементов.</td>
+    <td class="js-code">from random import randint<br><br>a = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(randint(-2, 2))<br>b = 1<br>for i in range(len(a)):<br>&nbsp;&nbsp;&nbsp;&nbsp;if a[i] != 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b *= a[i]<br>print("Массив:", a)<br>print("Произведение ненулевых элементов:", b)</td>
+    <td class="js-code">let array = [];<br>let product = 1;<br>for (let i = 0; i < 10; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let num = Math.floor(Math.random() * 5) - 2;<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(num);<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num !== 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;product *= num;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Массив:", array);<br>console.log("Произведение ненулевых элементов:", product);</td>
+</tr>
+<tr>
+    <td>57</td>
+    <td>Заполнить массив из 20 элементов случайными числами [100;1000] и найти суммы элементов в первой и второй половинах.</td>
+    <td class="js-code">from random import randint<br><br>a = []<br>for i in range(0,20):<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(randint(100, 1000))<br>print("Массив:", a)<br>print("Сумма элементов первой половины массива:", sum(a[:len(a)//2]))<br>print("Сумма элементов второй половины массива:", sum(a[len(a)//2:]))</td>
+    <td class="js-code">let array = [];<br>for (let i = 0; i < 20; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(Math.floor(Math.random() * 901) + 100);<br>}<br>let firstHalf = array.slice(0, 10);<br>let secondHalf = array.slice(10);<br>let sumFirst = firstHalf.reduce((acc, num) => acc + num, 0);<br>let sumSecond = secondHalf.reduce((acc, num) => acc + num, 0);<br>console.log("Массив:", array);<br>console.log("Сумма первой половины:", sumFirst);<br>console.log("Сумма второй половины
+</tr>
+<tr>
+    <td>58</td>
+    <td>Заполнить массив из 20 элементов случайными числами [0;200] и посчитать элементы, которые делятся на 10.</td>
+    <td class="js-code">from random import randint<br><br>a = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(randint(0, 200))<br>b = a.copy()<br>c = 0<br>for i in range(len(b)):<br>&nbsp;&nbsp;&nbsp;&nbsp;if b[i] % 10 == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c += 1<br>print("Массив:", a)<br>print("Число элементов, которые делятся на 10:", c)</td>
+    <td class="js-code">let array = [];<br>let countDivisibleBy10 = 0;<br>for (let i = 0; i < 20; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let num = Math.floor(Math.random() * 201);<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(num);<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num % 10 === 0 && num !== 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;countDivisibleBy10++;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Массив:", array);<br>console.log("Число элементов, которые делятся на 10:", countDivisibleBy10);</td>
+</tr>
+<tr>
+    <td>59</td>
+    <td>Заполнить массив из 20 элементов случайными числами [0;200] и посчитать двузначные числа.</td>
+    <td class="js-code">from random import randint<br><br>a = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(randint(0, 200))<br>b = a.copy()<br>c = 0<br>for i in range(len(b)):<br>&nbsp;&nbsp;&nbsp;&nbsp;if len(str(b[i])) == 2:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c += 1<br>print("Массив:", a)<br>print("Число двузначных чисел:", c)</td>
+    <td class="js-code">let array = [];<br>let twoDigitCount = 0;<br>for (let i = 0; i < 20; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let num = Math.floor(Math.random() * 201);<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(num);<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num >= 10 && num <= 99) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;twoDigitCount++;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Массив:", array);<br>console.log("Число двузначных чисел:", twoDigitCount);</td>
+</tr>
+<tr>
+    <td>60</td>
+    <td>Заполнить массив из 20 элементов случайными числами [10;100] и посчитать пары соседних элементов, сумма которых делится на 3.</td>
+    <td class="js-code">from random import randint<br><br>a = []<br>for i in range(0,10):<br>&nbsp;&nbsp;&nbsp;&nbsp;a.append(randint(10, 100))<br>b = a.copy()<br>c = 0<br>for i in range(len(b) - 1):<br>&nbsp;&nbsp;&nbsp;&nbsp;if (b[i] + b[i+1]) % 3 == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c += 1<br>print("Массив:", a)<br>print("Число пар элементов, сумма которых делится на 3:", c)</td>
+    <td class="js-code">let array = [];<br>let validPairs = 0;<br>for (let i = 0; i < 20; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;let num = Math.floor(Math.random() * 91) + 10;<br>&nbsp;&nbsp;&nbsp;&nbsp;array.push(num);<br>}<br>for (let i = 0; i < array.length - 1; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if ((array[i] + array[i + 1]) % 3 === 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;validPairs++;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br>console.log("Массив:", array);<br>console.log("Число пар элементов, сумма которых делится на 3:", validPairs);</td>
+</tr>
+        <!-- Остальные задачи будут аналогично преобразованы -->
+    </table>
+</body>
+</html>

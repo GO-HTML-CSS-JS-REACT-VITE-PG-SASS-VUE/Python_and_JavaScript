@@ -1,0 +1,6 @@
+print("   Ж")
+print("  ЖЖЖ")
+print(" ЖЖЖЖЖ")
+print("ЖЖЖЖЖЖЖ")
+print(" НН НН")
+print(" ZZZZZ")
